@@ -13,6 +13,7 @@ public interface TasksService {
     User getUserByID(long id);
     User saveUser(User user);
     void removeUser(long id);
+    User getUserByLogin(String login);
 
     List<Lists> getAllLists();
     Lists getListByID(long id);

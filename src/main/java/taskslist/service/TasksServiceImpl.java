@@ -41,6 +41,9 @@ public class TasksServiceImpl implements TasksService{
         userRepository.delete(id);
     }
 
+    public User getUserByLogin(String login) {
+        return userRepository.findByLogin(login).get(0);
+    }
 
 
     public List<Lists> getAllLists() {
