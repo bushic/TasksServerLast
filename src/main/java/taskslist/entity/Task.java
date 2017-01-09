@@ -21,8 +21,6 @@ public class Task {
     private String description;
     @Column(name = "done",nullable = false)
     private Boolean done;
-    @Column(name = "userid",nullable = true)
-    private long userid;
 
     public Task(){
 
@@ -68,11 +66,4 @@ public class Task {
         this.done = done;
     }
 
-    public long getUserid() {
-        return userid;
-    }
-
-    public void setUserid(long userid) {
-        this.userid = userid;
-    }
 }
