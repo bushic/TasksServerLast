@@ -5,6 +5,4 @@ import taskslist.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-
-
 }
