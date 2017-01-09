@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "lists")
-public class List {
+public class Lists {
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
@@ -16,7 +16,7 @@ public class List {
     @Column(name = "description",nullable = false)
     private String description;
 
-    public List(){
+    public Lists(){
 
     }
 
