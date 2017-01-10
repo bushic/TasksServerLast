@@ -20,10 +20,16 @@ public class TaskController {
         return service.getAllTasks();
     }
 
-    @RequestMapping(value = "/tasks/{id}",method = RequestMethod.GET)
+    /*@RequestMapping(value = "/tasks/{id}",method = RequestMethod.GET)
     @ResponseBody
     public Task getTask(@PathVariable long id){
         return service.getTaskByID(id);
+    }*/
+
+    @RequestMapping(value = "/tasks/{listid}",method = RequestMethod.GET)
+    @ResponseBody
+    public List<Task> getTasksByListID(@PathVariable long listid){
+        return service.getTasksByListID(listid);
     }
 
     @RequestMapping(value = "/tasks",method = RequestMethod.POST)

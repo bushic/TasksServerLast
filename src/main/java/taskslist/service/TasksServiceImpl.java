@@ -72,6 +72,10 @@ public class TasksServiceImpl implements TasksService{
         return taskRepository.findOne(id);
     }
 
+    public List<Task> getTasksByListID(long listid) {
+        return taskRepository.findByListid(listid);
+    }
+
     public Task saveTask(Task task) {
         return taskRepository.saveAndFlush(task);
     }
@@ -90,6 +94,10 @@ public class TasksServiceImpl implements TasksService{
         return permissionRepository.findOne(id);
     }
 
+    public List<Permission> getPermissionsByUserID(long userid) {
+        return permissionRepository.findByUserid(userid);
+    }
+
     public Permission savePermission(Permission permission) {
         return permissionRepository.saveAndFlush(permission);
     }
@@ -97,4 +105,6 @@ public class TasksServiceImpl implements TasksService{
     public void removePermission(long id) {
         permissionRepository.delete(id);
     }
+
+
 }

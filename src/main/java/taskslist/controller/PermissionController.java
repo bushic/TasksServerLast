@@ -20,13 +20,19 @@ public class PermissionController {
         return service.getAllPermissions();
     }
 
-    @RequestMapping(value = "/permissions/{id}",method = RequestMethod.GET)
+    /*@RequestMapping(value = "/permissions/{id}",method = RequestMethod.GET)
     @ResponseBody
     public Permission getPermission(@PathVariable long id){
         return service.getPermissionByID(id);
+    }*/
+
+    @RequestMapping(value = "/permissions/{userid}",method = RequestMethod.GET)
+    @ResponseBody
+    public List<Permission> getPermissionsByUserID(@PathVariable long userid) {
+        return service.getPermissionsByUserID(userid);
     }
 
-    @RequestMapping(value = "/permissions",method = RequestMethod.POST)
+        @RequestMapping(value = "/permissions",method = RequestMethod.POST)
     @ResponseBody
     public Permission savePermission(@RequestBody Permission permission){
         return service.savePermission(permission);
