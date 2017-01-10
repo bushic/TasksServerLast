@@ -42,7 +42,10 @@ public class TasksServiceImpl implements TasksService{
     }
 
     public User getUserByLogin(String login) {
-        return userRepository.findByLogin(login).get(0);
+        List<User> list = userRepository.findByLogin(login);
+        if (list.size() != 0)
+            return list.get(0);
+        else return null;
     }
 
 
